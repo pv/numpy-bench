@@ -370,6 +370,10 @@
         ],
         "params": [
             [
+                "'sin'",
+                "'cos'",
+                "'exp'",
+                "'log'",
                 "'sqrt'",
                 "'absolute'",
                 "'reciprocal'",
@@ -468,6 +472,22 @@
         "type": "time",
         "unit": "seconds",
         "version": "0b4e70f85f0a98773362fec07faa3dfa62df38218f8044b5e1874d19e5ff991d",
+        "warmup_time": -1
+    },
+    "bench_avx.LogisticRegression.time_train": {
+        "code": "class LogisticRegression:\n    def time_train(self):\n        self.train(1000)\n\n    def setup(self):\n        np.random.seed(42)\n        self.size = 250\n        features = 16\n        self.X_train = np.float32(np.random.rand(self.size,features))\n        self.Y_train = np.float32(np.random.choice(2,self.size))\n        # Initialize weights\n        self.W = np.zeros((features,1), dtype=np.float32)\n        self.b = np.zeros((1,1), dtype=np.float32)\n        self.alpha = 0.1",
+        "min_run_count": 2,
+        "name": "bench_avx.LogisticRegression.time_train",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 1000,
+        "type": "time",
+        "unit": "seconds",
+        "version": "871f8da35910cd3a67ee068825fd683841451e3c33bc67bfd7eb389c7fa88255",
         "warmup_time": -1
     },
     "bench_avx.Mandelbrot.time_mandel": {
