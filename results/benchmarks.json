@@ -1272,6 +1272,35 @@
         "version": "074fea3cb327abbd97e59f2acf3ae2eaefb70020bdef1cab122a9190ee139eb8",
         "warmup_time": -1
     },
+    "bench_core.VarComplex.time_var": {
+        "code": "class VarComplex:\n    def time_var(self, n):\n        self.arr.var()\n\n    def setup(self, n):\n        self.arr = np.random.randn(n) + 1j * np.random.randn(n)",
+        "min_run_count": 2,
+        "name": "bench_core.VarComplex.time_var",
+        "number": 0,
+        "param_names": [
+            "param1"
+        ],
+        "params": [
+            [
+                "10",
+                "100",
+                "1000",
+                "10000",
+                "100000",
+                "1000000",
+                "10000000",
+                "100000000"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "343d0479b33167dfc332d453e32b8710ee17a22fb693a3856575aa9dfad0d49d",
+        "warmup_time": -1
+    },
     "bench_function_base.Bincount.time_bincount": {
         "code": "class Bincount:\n    def time_bincount(self):\n        np.bincount(self.d)\n\n    def setup(self):\n        self.d = np.arange(80000, dtype=np.intp)\n        self.e = self.d.astype(np.float64)",
         "min_run_count": 2,
