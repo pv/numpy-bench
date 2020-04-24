@@ -475,19 +475,26 @@
         "warmup_time": -1
     },
     "bench_avx.LogisticRegression.time_train": {
-        "code": "class LogisticRegression:\n    def time_train(self):\n        self.train(1000)\n\n    def setup(self):\n        np.random.seed(42)\n        self.size = 250\n        features = 16\n        self.X_train = np.float32(np.random.rand(self.size,features))\n        self.Y_train = np.float32(np.random.choice(2,self.size))\n        # Initialize weights\n        self.W = np.zeros((features,1), dtype=np.float32)\n        self.b = np.zeros((1,1), dtype=np.float32)\n        self.alpha = 0.1",
+        "code": "class LogisticRegression:\n    def time_train(self, dtype):\n        self.train(1000)\n\n    def setup(self, dtype):\n        np.random.seed(42)\n        self.size = 250\n        features = 16\n        self.X_train = np.random.rand(self.size,features).astype(dtype)\n        self.Y_train = np.random.choice(2,self.size).astype(dtype)\n        # Initialize weights\n        self.W = np.zeros((features,1), dtype=dtype)\n        self.b = np.zeros((1,1), dtype=dtype)\n        self.alpha = 0.1",
         "min_run_count": 2,
         "name": "bench_avx.LogisticRegression.time_train",
         "number": 0,
-        "param_names": [],
-        "params": [],
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float32'>",
+                "<class 'numpy.float64'>"
+            ]
+        ],
         "processes": 2,
         "repeat": 0,
         "sample_time": 0.01,
         "timeout": 1000,
         "type": "time",
         "unit": "seconds",
-        "version": "871f8da35910cd3a67ee068825fd683841451e3c33bc67bfd7eb389c7fa88255",
+        "version": "e86e16eb2784715dd92cc28fe3cf3d4b7cd03bbfb23570674abc1d06d35e8505",
         "warmup_time": -1
     },
     "bench_avx.Mandelbrot.time_mandel": {
