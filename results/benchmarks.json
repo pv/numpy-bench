@@ -381,7 +381,12 @@
                 "'rint'",
                 "'floor'",
                 "'ceil'",
-                "'trunc'"
+                "'trunc'",
+                "'frexp'",
+                "'isnan'",
+                "'isfinite'",
+                "'isinf'",
+                "'signbit'"
             ],
             [
                 "1",
@@ -472,6 +477,35 @@
         "type": "time",
         "unit": "seconds",
         "version": "0b4e70f85f0a98773362fec07faa3dfa62df38218f8044b5e1874d19e5ff991d",
+        "warmup_time": -1
+    },
+    "bench_avx.AVX_ldexp.time_ufunc": {
+        "code": "class AVX_ldexp:\n    def time_ufunc(self, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, dtype, stride):\n        np.seterr(all='ignore')\n        self.f = getattr(np, 'ldexp')\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype='i')",
+        "min_run_count": 2,
+        "name": "bench_avx.AVX_ldexp.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "dtype",
+            "stride"
+        ],
+        "params": [
+            [
+                "'f'",
+                "'d'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "7b1485348542d48680da2c54ca6f3126661e7a3df7bc726f193d3961f6708ebe",
         "warmup_time": -1
     },
     "bench_avx.LogisticRegression.time_train": {
