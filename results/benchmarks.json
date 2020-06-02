@@ -4404,6 +4404,29 @@
         "version": "fdb7e7815fcaa4c4c0a8613bdd1f28b855d03f3732f123a144a613fcaa23d01f",
         "warmup_time": -1
     },
+    "bench_reduce.ArgMax.time_argmax": {
+        "code": "class ArgMax:\n    def time_argmax(self, dtype):\n        np.argmax(self.d)\n\n    def setup(self, dtype):\n        self.d = np.zeros(200000, dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_reduce.ArgMax.time_argmax",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float32'>",
+                "<class 'bool'>"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "2843a21fe3f8f99974c2c8e3ea2c53595d3246781016dfc14abd6116d720ba5e",
+        "warmup_time": -1
+    },
     "bench_reduce.MinMax.time_max": {
         "code": "class MinMax:\n    def time_max(self, dtype):\n        np.max(self.d)\n\n    def setup(self, dtype):\n        self.d = np.ones(20000, dtype=dtype)",
         "min_run_count": 2,
