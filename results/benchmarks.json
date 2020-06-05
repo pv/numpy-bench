@@ -4491,6 +4491,161 @@
         "version": "6c036bc421f0fb669164ceb2814d8765d6f3a6c7c38f5e2e55a3fc00945c9468",
         "warmup_time": -1
     },
+    "bench_scalar.ScalarMath.time_abs": {
+        "code": "class ScalarMath:\n    def time_abs(self, typename):\n        n = self.num\n        res = abs(abs(abs(abs(abs(abs(abs(abs(abs(abs(n))))))))))\n\n    def setup(self, typename):\n        self.num = np.dtype(typename).type(2)",
+        "min_run_count": 2,
+        "name": "bench_scalar.ScalarMath.time_abs",
+        "number": 0,
+        "param_names": [
+            "type"
+        ],
+        "params": [
+            [
+                "'int16'",
+                "'float16'",
+                "'int32'",
+                "'float32'",
+                "'int64'",
+                "'float64'",
+                "'complex64'",
+                "'longfloat'",
+                "'complex128'",
+                "'complex256'"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "4455712cecc7a36b6664d8435041d88c8385b150426edf80c9652d713090d59e",
+        "warmup_time": -1
+    },
+    "bench_scalar.ScalarMath.time_addition": {
+        "code": "class ScalarMath:\n    def time_addition(self, typename):\n        n = self.num\n        res = n + n + n + n + n + n + n + n + n + n\n\n    def setup(self, typename):\n        self.num = np.dtype(typename).type(2)",
+        "min_run_count": 2,
+        "name": "bench_scalar.ScalarMath.time_addition",
+        "number": 0,
+        "param_names": [
+            "type"
+        ],
+        "params": [
+            [
+                "'int16'",
+                "'float16'",
+                "'int32'",
+                "'float32'",
+                "'int64'",
+                "'float64'",
+                "'complex64'",
+                "'longfloat'",
+                "'complex128'",
+                "'complex256'"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "9338cca1a13271882005f3af2b833860de23437ced9888d5237592a45a47ca42",
+        "warmup_time": -1
+    },
+    "bench_scalar.ScalarMath.time_addition_pyint": {
+        "code": "class ScalarMath:\n    def time_addition_pyint(self, typename):\n        n = self.num\n        res = n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1\n\n    def setup(self, typename):\n        self.num = np.dtype(typename).type(2)",
+        "min_run_count": 2,
+        "name": "bench_scalar.ScalarMath.time_addition_pyint",
+        "number": 0,
+        "param_names": [
+            "type"
+        ],
+        "params": [
+            [
+                "'int16'",
+                "'float16'",
+                "'int32'",
+                "'float32'",
+                "'int64'",
+                "'float64'",
+                "'complex64'",
+                "'longfloat'",
+                "'complex128'",
+                "'complex256'"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "8687771d39a17bf8ba6048fde6c27b589dd90ff44366e42f474bb80f86777a4f",
+        "warmup_time": -1
+    },
+    "bench_scalar.ScalarMath.time_multiplication": {
+        "code": "class ScalarMath:\n    def time_multiplication(self, typename):\n        n = self.num\n        res = n * n * n * n * n * n * n * n * n * n\n\n    def setup(self, typename):\n        self.num = np.dtype(typename).type(2)",
+        "min_run_count": 2,
+        "name": "bench_scalar.ScalarMath.time_multiplication",
+        "number": 0,
+        "param_names": [
+            "type"
+        ],
+        "params": [
+            [
+                "'int16'",
+                "'float16'",
+                "'int32'",
+                "'float32'",
+                "'int64'",
+                "'float64'",
+                "'complex64'",
+                "'longfloat'",
+                "'complex128'",
+                "'complex256'"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "82e5f176831c477ac6b64f1f6ad36287503a6828c01cfb418988e51da57dfabf",
+        "warmup_time": -1
+    },
+    "bench_scalar.ScalarMath.time_power_of_two": {
+        "code": "class ScalarMath:\n    def time_power_of_two(self, typename):\n        n = self.num\n        res = n**2, n**2, n**2, n**2, n**2, n**2, n**2, n**2, n**2, n**2\n\n    def setup(self, typename):\n        self.num = np.dtype(typename).type(2)",
+        "min_run_count": 2,
+        "name": "bench_scalar.ScalarMath.time_power_of_two",
+        "number": 0,
+        "param_names": [
+            "type"
+        ],
+        "params": [
+            [
+                "'int16'",
+                "'float16'",
+                "'int32'",
+                "'float32'",
+                "'int64'",
+                "'float64'",
+                "'complex64'",
+                "'longfloat'",
+                "'complex128'",
+                "'complex256'"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "0dc2bcfb77ec9b5825169520f9b946b72a87d72a8b6d909fbb58cb728e29ab08",
+        "warmup_time": -1
+    },
     "bench_shape_base.Block.time_3d": {
         "code": "class Block3D:\n    def time_3d(self, n, mode):\n        if mode == 'block':\n            np.block(self.block)\n        else:  # mode == 'copy'\n            [arr.copy() for arr in self.arr_list]\n\n    def setup(self, n, mode):\n        # Slow setup method: hence separated from the others above\n        self.a000 = np.ones((2 * n, 2 * n, 2 * n), int) * 1\n    \n        self.a100 = np.ones((3 * n, 2 * n, 2 * n), int) * 2\n        self.a010 = np.ones((2 * n, 3 * n, 2 * n), int) * 3\n        self.a001 = np.ones((2 * n, 2 * n, 3 * n), int) * 4\n    \n        self.a011 = np.ones((2 * n, 3 * n, 3 * n), int) * 5\n        self.a101 = np.ones((3 * n, 2 * n, 3 * n), int) * 6\n        self.a110 = np.ones((3 * n, 3 * n, 2 * n), int) * 7\n    \n        self.a111 = np.ones((3 * n, 3 * n, 3 * n), int) * 8\n    \n        self.block = [\n            [\n                [self.a000, self.a001],\n                [self.a010, self.a011],\n            ],\n            [\n                [self.a100, self.a101],\n                [self.a110, self.a111],\n            ]\n        ]\n        self.arr_list = [a\n                         for two_d in self.block\n                         for one_d in two_d\n                         for a in one_d]",
         "min_run_count": 2,
