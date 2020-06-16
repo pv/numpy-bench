@@ -3323,6 +3323,94 @@
         "version": "e0e115ed5626e3f37056c84484c86e35bc62234e7781a233afc1e6a00c19c8c5",
         "warmup_time": -1
     },
+    "bench_linalg.Einsum.time_einsum_multiply": {
+        "code": "class Einsum:\n    def time_einsum_multiply(self, dtype):\n        np.einsum(\"..., ...\", self.c1, self.c , optimize=True)\n\n    def setup(self, dtype):\n        self.a = np.arange(2900, dtype=dtype)\n        self.b = np.arange(3000, dtype=dtype)\n        self.c = np.arange(24000, dtype=dtype).reshape(20, 30, 40)\n        self.c1 = np.arange(1200, dtype=dtype).reshape(30, 40)\n        self.d = np.arange(10000, dtype=dtype).reshape(10,100,10)",
+        "min_run_count": 2,
+        "name": "bench_linalg.Einsum.time_einsum_multiply",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "a291a16519d05d2b62320aeae8c1e096ce520ce716fc628cbd74b54c00872eeb",
+        "warmup_time": -1
+    },
+    "bench_linalg.Einsum.time_einsum_outer": {
+        "code": "class Einsum:\n    def time_einsum_outer(self, dtype):\n        np.einsum(\"i,j\", self.a, self.b, optimize=True)\n\n    def setup(self, dtype):\n        self.a = np.arange(2900, dtype=dtype)\n        self.b = np.arange(3000, dtype=dtype)\n        self.c = np.arange(24000, dtype=dtype).reshape(20, 30, 40)\n        self.c1 = np.arange(1200, dtype=dtype).reshape(30, 40)\n        self.d = np.arange(10000, dtype=dtype).reshape(10,100,10)",
+        "min_run_count": 2,
+        "name": "bench_linalg.Einsum.time_einsum_outer",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "9b3b7584ff55845212706a85b9331c0bd1fa8034e79a3de238d4ea215d1d48dc",
+        "warmup_time": -1
+    },
+    "bench_linalg.Einsum.time_einsum_sum_mul": {
+        "code": "class Einsum:\n    def time_einsum_sum_mul(self, dtype):\n        np.einsum(\",i...->\", 300, self.d, optimize=True)\n\n    def setup(self, dtype):\n        self.a = np.arange(2900, dtype=dtype)\n        self.b = np.arange(3000, dtype=dtype)\n        self.c = np.arange(24000, dtype=dtype).reshape(20, 30, 40)\n        self.c1 = np.arange(1200, dtype=dtype).reshape(30, 40)\n        self.d = np.arange(10000, dtype=dtype).reshape(10,100,10)",
+        "min_run_count": 2,
+        "name": "bench_linalg.Einsum.time_einsum_sum_mul",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "89d044c185e81a5413154cd0a4ee6fe1ac63672eef25c5bc212dee660a1dc50c",
+        "warmup_time": -1
+    },
+    "bench_linalg.Einsum.time_einsum_sum_mul2": {
+        "code": "class Einsum:\n    def time_einsum_sum_mul2(self, dtype):\n        np.einsum(\"i...,->\", self.d, 300, optimize=True)\n\n    def setup(self, dtype):\n        self.a = np.arange(2900, dtype=dtype)\n        self.b = np.arange(3000, dtype=dtype)\n        self.c = np.arange(24000, dtype=dtype).reshape(20, 30, 40)\n        self.c1 = np.arange(1200, dtype=dtype).reshape(30, 40)\n        self.d = np.arange(10000, dtype=dtype).reshape(10,100,10)",
+        "min_run_count": 2,
+        "name": "bench_linalg.Einsum.time_einsum_sum_mul2",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "eb2385c2bace0ca2783ca08cf0d93d44411bb2bc21f34bee9ca79e067083dc5c",
+        "warmup_time": -1
+    },
     "bench_linalg.Linalg.time_op": {
         "code": "class Linalg:\n    def time_op(self, op, typename):\n        self.func(self.a)\n\n    def setup(self, op, typename):\n        np.seterr(all='ignore')\n    \n        self.func = getattr(np.linalg, op)\n    \n        if op == 'cholesky':\n            # we need a positive definite\n            self.a = np.dot(get_squares_()[typename],\n                            get_squares_()[typename].T)\n        else:\n            self.a = get_squares_()[typename]\n    \n        # check that dtype is supported at all\n        try:\n            self.func(self.a[:2, :2])\n        except TypeError:\n            raise NotImplementedError()",
         "min_run_count": 2,
