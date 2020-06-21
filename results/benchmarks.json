@@ -13,7 +13,7 @@
                 "'normal'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -28,7 +28,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -53,7 +53,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -78,7 +78,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -103,7 +103,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -128,7 +128,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -153,7 +153,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -178,7 +178,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -203,7 +203,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -228,7 +228,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -253,7 +253,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -278,7 +278,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -303,7 +303,7 @@
                 "5"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -336,7 +336,7 @@
                 "4"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
@@ -384,7 +384,7 @@
                 "'d'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
@@ -419,7 +419,7 @@
                 "'D'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
@@ -454,7 +454,7 @@
                 "'D'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
@@ -482,7 +482,7 @@
                 "4"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
@@ -504,7 +504,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 1000,
         "type": "time",
@@ -519,7 +519,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -534,7 +534,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -549,7 +549,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -564,7 +564,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -579,7 +579,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -594,7 +594,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -609,7 +609,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -624,7 +624,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -639,7 +639,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -654,7 +654,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -669,7 +669,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -684,7 +684,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -699,7 +699,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -714,7 +714,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -729,7 +729,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -744,7 +744,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -759,7 +759,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -774,7 +774,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -789,7 +789,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -804,7 +804,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -819,7 +819,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -834,7 +834,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -849,7 +849,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -885,7 +885,7 @@
                 "'full'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -921,7 +921,7 @@
                 "'full'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -957,7 +957,7 @@
                 "<class 'object'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -993,7 +993,7 @@
                 "<class 'object'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1029,7 +1029,7 @@
                 "<class 'object'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1044,7 +1044,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1066,7 +1066,7 @@
                 "<class 'numpy.uint64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1088,7 +1088,7 @@
                 "<class 'numpy.uint64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1110,7 +1110,7 @@
                 "<class 'numpy.uint64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1125,7 +1125,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1140,7 +1140,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1155,7 +1155,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1170,7 +1170,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1185,7 +1185,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1200,7 +1200,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1215,7 +1215,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1230,7 +1230,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1245,7 +1245,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1273,7 +1273,7 @@
                 "100000000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1288,7 +1288,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1303,7 +1303,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1318,7 +1318,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1333,7 +1333,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1348,7 +1348,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1363,7 +1363,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1378,7 +1378,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1393,7 +1393,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1408,7 +1408,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1423,7 +1423,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1438,7 +1438,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1453,7 +1453,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1468,7 +1468,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1483,7 +1483,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1498,7 +1498,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1513,7 +1513,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1528,7 +1528,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1543,7 +1543,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1582,7 +1582,7 @@
                 "('sorted_block', 1000)"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1621,7 +1621,7 @@
                 "('sorted_block', 1000)"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1636,7 +1636,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1651,7 +1651,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1666,7 +1666,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1681,7 +1681,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1696,7 +1696,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1711,7 +1711,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1726,7 +1726,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1741,7 +1741,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1756,7 +1756,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1771,7 +1771,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1786,7 +1786,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1819,7 +1819,7 @@
                 "'=1'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1834,7 +1834,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1849,7 +1849,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1864,7 +1864,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1879,7 +1879,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1894,7 +1894,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1909,7 +1909,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1935,7 +1935,7 @@
                 "'complex128'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1961,7 +1961,7 @@
                 "'complex128'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -1987,7 +1987,7 @@
                 "'complex128'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2013,7 +2013,7 @@
                 "'complex128'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2039,7 +2039,7 @@
                 "'complex128'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2054,7 +2054,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2069,7 +2069,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2084,7 +2084,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2099,7 +2099,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2114,7 +2114,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2138,7 +2138,7 @@
                 "100000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2162,7 +2162,7 @@
                 "20000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2185,7 +2185,7 @@
                 "10000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2200,7 +2200,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2234,7 +2234,7 @@
                 "100000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2257,7 +2257,7 @@
                 "10000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2280,7 +2280,7 @@
                 "10000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2303,7 +2303,7 @@
                 "[1, 3, 5, 7]"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2318,7 +2318,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2353,7 +2353,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2388,7 +2388,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2431,7 +2431,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2461,7 +2461,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2491,7 +2491,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2521,7 +2521,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2551,7 +2551,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2581,7 +2581,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2611,7 +2611,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2641,7 +2641,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2671,7 +2671,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2701,7 +2701,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2731,7 +2731,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2761,7 +2761,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2791,7 +2791,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2821,7 +2821,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2851,7 +2851,7 @@
                 "90.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2891,7 +2891,7 @@
                 "'wrap'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2906,7 +2906,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2921,7 +2921,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2936,7 +2936,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2951,7 +2951,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2966,7 +2966,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2981,7 +2981,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -2996,7 +2996,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3011,7 +3011,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3026,7 +3026,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3041,7 +3041,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3056,7 +3056,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3071,7 +3071,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3086,7 +3086,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3101,7 +3101,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3116,7 +3116,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3131,7 +3131,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3146,7 +3146,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3161,7 +3161,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3182,7 +3182,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3203,7 +3203,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3224,7 +3224,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3245,7 +3245,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3282,7 +3282,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3297,7 +3297,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3328,7 +3328,7 @@
                 "2000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3361,7 +3361,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3394,7 +3394,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3427,7 +3427,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3442,7 +3442,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3457,7 +3457,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3472,7 +3472,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3505,7 +3505,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3538,7 +3538,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3571,7 +3571,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3604,7 +3604,7 @@
                 "1000"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3619,7 +3619,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3634,7 +3634,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3649,7 +3649,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3664,7 +3664,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3679,7 +3679,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3694,7 +3694,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3736,7 +3736,7 @@
                 "[<class 'numpy.uint64'>, 2047]"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3759,7 +3759,7 @@
                 "100000000.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3782,7 +3782,7 @@
                 "100000000.0"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3797,7 +3797,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3812,7 +3812,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3827,7 +3827,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3852,7 +3852,7 @@
                 "'numpy'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3877,7 +3877,7 @@
                 "'numpy'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3902,7 +3902,7 @@
                 "'numpy'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3927,7 +3927,7 @@
                 "'numpy'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3942,7 +3942,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3957,7 +3957,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -3982,7 +3982,7 @@
                 "'uint64'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4007,7 +4007,7 @@
                 "'uint64'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4032,7 +4032,7 @@
                 "'poisson 10'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4047,7 +4047,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4062,7 +4062,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4077,7 +4077,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4092,7 +4092,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4107,7 +4107,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4122,7 +4122,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4137,7 +4137,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4152,7 +4152,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4167,7 +4167,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4182,7 +4182,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4217,7 +4217,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4232,7 +4232,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4247,7 +4247,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4262,7 +4262,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4277,7 +4277,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4299,7 +4299,7 @@
                 "<class 'bool'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4322,7 +4322,7 @@
                 "<class 'numpy.int64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4345,7 +4345,7 @@
                 "<class 'numpy.int64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4360,7 +4360,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4390,7 +4390,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4420,7 +4420,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4450,7 +4450,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4480,7 +4480,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4510,7 +4510,7 @@
                 "'complex256'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4538,7 +4538,7 @@
                 "'copy'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4561,7 +4561,7 @@
                 "100"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4584,7 +4584,7 @@
                 "100"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4607,7 +4607,7 @@
                 "100"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4630,7 +4630,7 @@
                 "100"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4653,7 +4653,7 @@
                 "100"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4692,7 +4692,7 @@
                 "(4, 4)"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4720,7 +4720,7 @@
                 "(array(1.), array(2.), array(3.), subok=True, where=True)"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4748,7 +4748,7 @@
                 "(array([0., 1.]), out=array(0.))"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4763,7 +4763,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4778,7 +4778,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4793,7 +4793,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4808,7 +4808,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4823,7 +4823,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4838,7 +4838,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4853,7 +4853,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4868,7 +4868,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4883,7 +4883,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4898,7 +4898,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4913,7 +4913,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4928,7 +4928,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4943,7 +4943,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4965,7 +4965,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -4987,7 +4987,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5009,7 +5009,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5031,7 +5031,7 @@
                 "<class 'numpy.float64'>"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5046,7 +5046,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5061,7 +5061,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5076,7 +5076,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 60.0,
         "type": "time",
@@ -5187,7 +5187,7 @@
                 "'trunc'"
             ]
         ],
-        "rounds": 1,
+        "rounds": 2,
         "sample_time": 0.01,
         "timeout": 10,
         "type": "time",
