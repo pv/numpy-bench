@@ -528,7 +528,7 @@
         "warmup_time": -1
     },
     "bench_core.Core.time_arange_100": {
-        "code": "class Core:\n    def time_arange_100(self):\n        np.arange(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_arange_100(self):\n        np.arange(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_arange_100",
         "number": 0,
@@ -539,11 +539,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "4f7bfbd6f86991a3db3d08c1331c2009fc8b1d178b0c42599456e94c48b466a4",
+        "version": "9810ff39cf0d90038a0f034783bd846b9b7de314928b7ed9b77a9db9ab62a515",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_1": {
-        "code": "class Core:\n    def time_array_1(self):\n        np.array(1)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_1(self):\n        np.array(1)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_1",
         "number": 0,
@@ -554,11 +554,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "7fa9e678718fb6ced91aae2ce8038b80c0fdd3384c402630fbc61ee882fbf0ae",
+        "version": "aebef56aaf9fb83a7a269cd2353e0e3ee094f80cd9aa5ee2224a71dec34d1b08",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_empty": {
-        "code": "class Core:\n    def time_array_empty(self):\n        np.array([])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_empty(self):\n        np.array([])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_empty",
         "number": 0,
@@ -569,11 +569,71 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "07b2c59fe83ea19a039142f47af167098b23fd1d18303bc953cafc2d3571d6d2",
+        "version": "9a1586e568107cf4face75cecd6781c6359af578ef730c85a4f752eec1dbaa9a",
+        "warmup_time": -1
+    },
+    "bench_core.Core.time_array_float64_l1000": {
+        "code": "class Core:\n    def time_array_float64_l1000(self):\n        np.array(self.float64_l1000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_array_float64_l1000",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "ccc5ca6d62274d036ae686dadc52f3d09e242ad9cd57d2c408da0b39d1943914",
+        "warmup_time": -1
+    },
+    "bench_core.Core.time_array_float_l1000": {
+        "code": "class Core:\n    def time_array_float_l1000(self):\n        np.array(self.float_l1000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_array_float_l1000",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "461053b7868bf5b2057d2bab87037b5e07c6cf938871cb3766b44a69b8270f18",
+        "warmup_time": -1
+    },
+    "bench_core.Core.time_array_float_l1000_dtype": {
+        "code": "class Core:\n    def time_array_float_l1000_dtype(self):\n        np.array(self.float_l1000, dtype=self.float64_dtype)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_array_float_l1000_dtype",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "3bb7c63d26535c89a4bddc30b2aa5f74488ffae091736b6622e911af9a30ae1f",
+        "warmup_time": -1
+    },
+    "bench_core.Core.time_array_int_l1000": {
+        "code": "class Core:\n    def time_array_int_l1000(self):\n        np.array(self.int_l1000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_array_int_l1000",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "89e8dee6420ae63d274cc4a6beb3038a46fbd62faf80b1e485adb3a00ad4a359",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_l": {
-        "code": "class Core:\n    def time_array_l(self):\n        np.array(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_l(self):\n        np.array(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_l",
         "number": 0,
@@ -584,11 +644,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "8d84de560083750233079df8fbdfb50199dabaaca4412c335963b28c980e9ae0",
+        "version": "68192f51161df9d033cd5f2090e414b700ecf573b2e9000b0c534223dbbd1289",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_l1": {
-        "code": "class Core:\n    def time_array_l1(self):\n        np.array([1])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_l1(self):\n        np.array([1])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_l1",
         "number": 0,
@@ -599,11 +659,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "86cbf38a833818a7db9677148d4c69ac6911c610594557c382f312115b24368f",
+        "version": "241cdb1e469ff23c8c0308f3ff7813b606f280f0100c323d4ee3ae9f85da5595",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_l100": {
-        "code": "class Core:\n    def time_array_l100(self):\n        np.array(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_l100(self):\n        np.array(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_l100",
         "number": 0,
@@ -614,11 +674,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "e706360b70642442b669b4d3cb3bf162192735d00c5c38a2956923adde19a7d1",
+        "version": "d704ac86a6671472c3625d12d6408848665f9db0ce76872e4893c6444287df7a",
         "warmup_time": -1
     },
     "bench_core.Core.time_array_l_view": {
-        "code": "class Core:\n    def time_array_l_view(self):\n        np.array(self.l_view)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_array_l_view(self):\n        np.array(self.l_view)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_array_l_view",
         "number": 0,
@@ -629,11 +689,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "186e1ffc67cfdee51c5f9378453368816f95247c20b874d900c57b18d62eb10c",
+        "version": "ece084f922536234f4dd58a4601dbcbebf246861708e32f5d4051d21acbae2b8",
         "warmup_time": -1
     },
     "bench_core.Core.time_diag_l100": {
-        "code": "class Core:\n    def time_diag_l100(self):\n        np.diag(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_diag_l100(self):\n        np.diag(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_diag_l100",
         "number": 0,
@@ -644,11 +704,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "015bddc239ef5ce23dc78a32a6f811a62801f7bc0a8488b56e81664853bba1cb",
+        "version": "6e62ecc1856911a7a4997e46036370168fbcef6da55f9cdc14425052fd6af8a3",
         "warmup_time": -1
     },
     "bench_core.Core.time_diagflat_l100": {
-        "code": "class Core:\n    def time_diagflat_l100(self):\n        np.diagflat(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_diagflat_l100(self):\n        np.diagflat(self.l100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_diagflat_l100",
         "number": 0,
@@ -659,11 +719,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "6aff7ea01e21a130b388109ba4babffe5656c1b8562770c9072a51e424c5e188",
+        "version": "cf3eeccf300cf54e62332841fe4e1d22f44208d6b3a264cb5a2260121fd752bd",
         "warmup_time": -1
     },
     "bench_core.Core.time_diagflat_l50_l50": {
-        "code": "class Core:\n    def time_diagflat_l50_l50(self):\n        np.diagflat([self.l50, self.l50])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_diagflat_l50_l50(self):\n        np.diagflat([self.l50, self.l50])\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_diagflat_l50_l50",
         "number": 0,
@@ -674,11 +734,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "03b93b1ad78dbaf05ad06bc463148c8642172679ea6114d22238442809b94ad5",
+        "version": "d2b890e26851599c8e29b40dbdabc8dbf1fa8dd62196cccbf9666f96e6f8e2e3",
         "warmup_time": -1
     },
     "bench_core.Core.time_dstack_l": {
-        "code": "class Core:\n    def time_dstack_l(self):\n        np.dstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_dstack_l(self):\n        np.dstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_dstack_l",
         "number": 0,
@@ -689,11 +749,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "9c773e4e068fd70be7e5bc9dce2e88701b671436f98cd0224f8185836c3fd9b8",
+        "version": "61b3007741cca1eb312f112e40a2f4904676511eed1d9717f70f35d37d4e69fe",
         "warmup_time": -1
     },
     "bench_core.Core.time_empty_100": {
-        "code": "class Core:\n    def time_empty_100(self):\n        np.empty(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_empty_100(self):\n        np.empty(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_empty_100",
         "number": 0,
@@ -704,11 +764,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "a0df5f40c2c2c979b95c6de11599d9f5e7e31d7edb8164bb57eb656da629e4b6",
+        "version": "559d67381ed0945a2d30dd05ea10953cb54301944e11e550dd7cda8b87253ca5",
         "warmup_time": -1
     },
     "bench_core.Core.time_eye_100": {
-        "code": "class Core:\n    def time_eye_100(self):\n        np.eye(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_eye_100(self):\n        np.eye(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_eye_100",
         "number": 0,
@@ -719,11 +779,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "06be3e809788f1dc9be1eac5055010321875753549fe3c9981af7f20c36b14c0",
+        "version": "56a9ccc305d01ef5ac1e6fa57132076e313f1806b7b24edf967e272484072655",
         "warmup_time": -1
     },
     "bench_core.Core.time_eye_3000": {
-        "code": "class Core:\n    def time_eye_3000(self):\n        np.eye(3000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_eye_3000(self):\n        np.eye(3000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_eye_3000",
         "number": 0,
@@ -734,11 +794,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "a1768365dc7eca6dddafffb5006242540f5108b37a5a9983ca1a291664a3bf89",
+        "version": "824c99e7affa09c806961a580afaa51cf639bc65ddb114543fc2fe22952f33ff",
         "warmup_time": -1
     },
     "bench_core.Core.time_hstack_l": {
-        "code": "class Core:\n    def time_hstack_l(self):\n        np.hstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_hstack_l(self):\n        np.hstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_hstack_l",
         "number": 0,
@@ -749,11 +809,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "e6a7ad8f2912ea7bb23bb66bb15b4135f74521e52271a4207ea0bd0af1c9bdb9",
+        "version": "144b89def72fc1ce8633c9877160d7e1ef3e5d60fcca6715f3baff628acde755",
         "warmup_time": -1
     },
     "bench_core.Core.time_identity_100": {
-        "code": "class Core:\n    def time_identity_100(self):\n        np.identity(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_identity_100(self):\n        np.identity(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_identity_100",
         "number": 0,
@@ -764,11 +824,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "4721c1a2aa7df8511a5e289e366cd73bf1d6d2495ea894847d7c5c4d02b4d47b",
+        "version": "d46f8b9fda8d7af1e55aaee2a9707a32f556309f127f324c3f0f9e14577f9c84",
         "warmup_time": -1
     },
     "bench_core.Core.time_identity_3000": {
-        "code": "class Core:\n    def time_identity_3000(self):\n        np.identity(3000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_identity_3000(self):\n        np.identity(3000)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_identity_3000",
         "number": 0,
@@ -779,11 +839,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "5bf002a95b43de43f3ab3fc8b2888b4177097f22bb8436722737dc81c6bd6c96",
+        "version": "f25f09f407fc0ec65996e154ce1acc3605fbfc1956b2e45ab7a8be95eabe9742",
         "warmup_time": -1
     },
     "bench_core.Core.time_ones_100": {
-        "code": "class Core:\n    def time_ones_100(self):\n        np.ones(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_ones_100(self):\n        np.ones(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_ones_100",
         "number": 0,
@@ -794,11 +854,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "63536854d1c9a24206914c930272e13cc2b6fdb9b742b416fe0b14273229b114",
+        "version": "f5f2fda543a06557ed577505581a4e4a69c28db7f4d56d15e3a5ab70c5836ad1",
         "warmup_time": -1
     },
     "bench_core.Core.time_tril_l10x10": {
-        "code": "class Core:\n    def time_tril_l10x10(self):\n        np.tril(self.l10x10)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_tril_l10x10(self):\n        np.tril(self.l10x10)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_tril_l10x10",
         "number": 0,
@@ -809,11 +869,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "23e4b1c6712fcb9368627f01b466354ddea0b526961085b2635852687417ac04",
+        "version": "52a8d958bc2f0d6641959d60b4e362bd13ff07ad07cb91f67c86c1371049d522",
         "warmup_time": -1
     },
     "bench_core.Core.time_triu_l10x10": {
-        "code": "class Core:\n    def time_triu_l10x10(self):\n        np.triu(self.l10x10)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_triu_l10x10(self):\n        np.triu(self.l10x10)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_triu_l10x10",
         "number": 0,
@@ -824,11 +884,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "25771c744927529bbb9e69795deea790099aaab7e9bfbff4de0c857c10f43195",
+        "version": "450bc906f82b3446c2c3ce69ea043137dc643848b9378c0387b7f50b18e99216",
         "warmup_time": -1
     },
     "bench_core.Core.time_vstack_l": {
-        "code": "class Core:\n    def time_vstack_l(self):\n        np.vstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_vstack_l(self):\n        np.vstack(self.l)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_vstack_l",
         "number": 0,
@@ -839,11 +899,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "0af62c8785920e1c41974ea173aac4d912f3058e70b20dc7bc078ecf4a4d90ab",
+        "version": "1287e18f3b28dadd8b9aca804e354546ffb3b238647b20cf3667d86e88c9412e",
         "warmup_time": -1
     },
     "bench_core.Core.time_zeros_100": {
-        "code": "class Core:\n    def time_zeros_100(self):\n        np.zeros(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))",
+        "code": "class Core:\n    def time_zeros_100(self):\n        np.zeros(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
         "name": "bench_core.Core.time_zeros_100",
         "number": 0,
@@ -854,7 +914,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "e409b258f9872e9121d771ad26bee801624fcaf0d3959f6524a4a15746be80da",
+        "version": "206e21887f58c043e2d286405ddabefa934a6cecc80fbe3045636dee7df139a4",
         "warmup_time": -1
     },
     "bench_core.CorrConv.time_convolve": {
