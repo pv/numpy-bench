@@ -1977,6 +1977,75 @@
         "version": "ffcfe894af4580d854b9e8b2d38687ab9ee9c372cc0d50fd467e5eab42e974ce",
         "warmup_time": -1
     },
+    "bench_indexing.ScalarIndexing.time_assign": {
+        "code": "class ScalarIndexing:\n    def time_assign(self, ndim):\n        # time assignment from a python scalar\n        arr = self.array\n        indx = (1,) * ndim\n        for i in range(100):\n            arr[indx] = 5.\n\n    def setup(self, ndim):\n        self.array = np.ones((5,) * ndim)",
+        "min_run_count": 2,
+        "name": "bench_indexing.ScalarIndexing.time_assign",
+        "number": 0,
+        "param_names": [
+            "ndim"
+        ],
+        "params": [
+            [
+                "0",
+                "1",
+                "2"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "52c0dfa579d132ce77b2ca2d0b042734f9d8f60d0e16ef2af7f292e1d49d5936",
+        "warmup_time": -1
+    },
+    "bench_indexing.ScalarIndexing.time_assign_cast": {
+        "code": "class ScalarIndexing:\n    def time_assign_cast(self, ndim):\n        # time an assignment which may use a cast operation\n        arr = self.array\n        indx = (1,) * ndim\n        val = np.int16(43)\n        for i in range(100):\n            arr[indx] = val\n\n    def setup(self, ndim):\n        self.array = np.ones((5,) * ndim)",
+        "min_run_count": 2,
+        "name": "bench_indexing.ScalarIndexing.time_assign_cast",
+        "number": 0,
+        "param_names": [
+            "ndim"
+        ],
+        "params": [
+            [
+                "0",
+                "1",
+                "2"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "36f3c671c5ba3cb5633f4a6b4e211938c2eb5857440c2a0e3c06281d2c0a5bc7",
+        "warmup_time": -1
+    },
+    "bench_indexing.ScalarIndexing.time_index": {
+        "code": "class ScalarIndexing:\n    def time_index(self, ndim):\n        # time indexing.\n        arr = self.array\n        indx = (1,) * ndim\n        for i in range(100):\n            arr[indx]\n\n    def setup(self, ndim):\n        self.array = np.ones((5,) * ndim)",
+        "min_run_count": 2,
+        "name": "bench_indexing.ScalarIndexing.time_index",
+        "number": 0,
+        "param_names": [
+            "ndim"
+        ],
+        "params": [
+            [
+                "0",
+                "1",
+                "2"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "b5a4c10e3553e7101b7fc679cb355150c5b27d7c7b5544f50660fbe581936f73",
+        "warmup_time": -1
+    },
     "bench_io.Copy.time_cont_assign": {
         "code": "class Copy:\n    def time_cont_assign(self, typename):\n        self.d[...] = 1\n\n    def setup(self, typename):\n        dtype = np.dtype(typename)\n        self.d = np.arange((50 * 500), dtype=dtype).reshape((500, 50))\n        self.e = np.arange((50 * 500), dtype=dtype).reshape((50, 500))\n        self.e_d = self.e.reshape(self.d.shape)\n        self.dflat = np.arange((50 * 500), dtype=dtype)",
         "min_run_count": 2,
