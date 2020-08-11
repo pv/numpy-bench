@@ -392,6 +392,34 @@
         "version": "3f18366b6788e34421cdeb9a79a4907bea86596c5c98e6a6846e007809f73c27",
         "warmup_time": -1
     },
+    "bench_avx.AVX_UFunc_log.time_log": {
+        "code": "class AVX_UFunc_log:\n    def time_log(self, stride, dtype):\n        np.log(self.arr[::stride])\n\n    def setup(self, stride, dtype):\n        np.seterr(all='ignore')\n        N = 10000\n        self.arr = np.array(np.random.random_sample(stride*N), dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_avx.AVX_UFunc_log.time_log",
+        "number": 0,
+        "param_names": [
+            "stride",
+            "dtype"
+        ],
+        "params": [
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'f'",
+                "'d'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "758b2c2d627de74fb1523a7612f0bc5575388c40d22107bcee8e49ecb7cbbfd4",
+        "warmup_time": -1
+    },
     "bench_avx.AVX_cmplx_arithmetic.time_ufunc": {
         "code": "class AVX_cmplx_arithmetic:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)\n        self.arr2 = np.ones(stride*N, dtype)",
         "min_run_count": 2,
@@ -4827,6 +4855,36 @@
         "type": "time",
         "unit": "seconds",
         "version": "93de8827eb35255e1f0daea4c5054d670f73b0c62c2cb54fc42a81e29c851ea8",
+        "warmup_time": -1
+    },
+    "bench_trim_zeros.TrimZeros.time_trim_zeros": {
+        "code": "class TrimZeros:\n    def time_trim_zeros(self, dtype, size):\n        np.trim_zeros(self.array)\n\n    def setup(self, dtype, size):\n        n = size // 3\n        self.array = np.hstack([\n            np.zeros(n),\n            np.random.uniform(size=n),\n            np.zeros(n),\n        ]).astype(dtype)",
+        "min_run_count": 2,
+        "name": "bench_trim_zeros.TrimZeros.time_trim_zeros",
+        "number": 0,
+        "param_names": [
+            "dtype",
+            "size"
+        ],
+        "params": [
+            [
+                "dtype('int64')",
+                "dtype('float64')",
+                "dtype('complex128')",
+                "dtype('bool')"
+            ],
+            [
+                "3000",
+                "30000",
+                "300000"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "aa967874dea8e59b67e272fc23171647622694eafb5361945f785d17500097c3",
         "warmup_time": -1
     },
     "bench_ufunc.ArgParsing.time_add_arg_parsing": {
