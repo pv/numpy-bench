@@ -1206,6 +1206,28 @@
         "version": "138b6e3b289ecabf2012d7d40274f69f848fc241c53fe21eb8dcf5ff77dc3dd2",
         "warmup_time": -1
     },
+    "bench_core.PackBits.time_packbits_little": {
+        "code": "class PackBits:\n    def time_packbits_little(self, dtype):\n        np.packbits(self.d, bitorder=\"little\")\n\n    def setup(self, dtype):\n        self.d = np.ones(10000, dtype=dtype)\n        self.d2 = np.ones((200, 1000), dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_core.PackBits.time_packbits_little",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'bool'>",
+                "<class 'numpy.uint64'>"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "b40e33398c541441ca74f3b9af0da0e187cd290dcb8f1c4040cd21b942212b93",
+        "warmup_time": -1
+    },
     "bench_core.Temporaries.time_large": {
         "code": "class Temporaries:\n    def time_large(self):\n        (self.alarge * 2) + self.blarge\n\n    def setup(self):\n        self.amid = np.ones(50000)\n        self.bmid = np.ones(50000)\n        self.alarge = np.ones(1000000)\n        self.blarge = np.ones(1000000)",
         "min_run_count": 2,
