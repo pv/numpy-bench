@@ -311,250 +311,6 @@
         "version": "274ebaa23a30c9368e2ff6d82c13b62ec653a7d4736f01f1fa8921021769aea1",
         "warmup_time": -1
     },
-    "bench_avx.AVX_BFunc.time_ufunc": {
-        "code": "class AVX_BFunc:\n    def time_ufunc(self, ufuncname, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, ufuncname, dtype, stride):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype=dtype)",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_BFunc.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "avx_based_bfunc",
-            "dtype",
-            "stride"
-        ],
-        "params": [
-            [
-                "'maximum'",
-                "'minimum'"
-            ],
-            [
-                "'f'",
-                "'d'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "d5f7476238150410a90783e3473e3450318af3bdbdd6438270304e15de264b65",
-        "warmup_time": -1
-    },
-    "bench_avx.AVX_UFunc.time_ufunc": {
-        "code": "class AVX_UFunc:\n    def time_ufunc(self, ufuncname, stride, dtype):\n        self.f(self.arr[::stride])\n\n    def setup(self, ufuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr = np.ones(stride*N, dtype)",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_UFunc.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "avx_based_ufunc",
-            "stride",
-            "dtype"
-        ],
-        "params": [
-            [
-                "'sin'",
-                "'cos'",
-                "'exp'",
-                "'log'",
-                "'sqrt'",
-                "'absolute'",
-                "'reciprocal'",
-                "'square'",
-                "'rint'",
-                "'floor'",
-                "'ceil'",
-                "'trunc'",
-                "'frexp'",
-                "'isnan'",
-                "'isfinite'",
-                "'isinf'",
-                "'signbit'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ],
-            [
-                "'f'",
-                "'d'"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "3f18366b6788e34421cdeb9a79a4907bea86596c5c98e6a6846e007809f73c27",
-        "warmup_time": -1
-    },
-    "bench_avx.AVX_UFunc_log.time_log": {
-        "code": "class AVX_UFunc_log:\n    def time_log(self, stride, dtype):\n        np.log(self.arr[::stride])\n\n    def setup(self, stride, dtype):\n        np.seterr(all='ignore')\n        N = 10000\n        self.arr = np.array(np.random.random_sample(stride*N), dtype=dtype)",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_UFunc_log.time_log",
-        "number": 0,
-        "param_names": [
-            "stride",
-            "dtype"
-        ],
-        "params": [
-            [
-                "1",
-                "2",
-                "4"
-            ],
-            [
-                "'f'",
-                "'d'"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "758b2c2d627de74fb1523a7612f0bc5575388c40d22107bcee8e49ecb7cbbfd4",
-        "warmup_time": -1
-    },
-    "bench_avx.AVX_cmplx_arithmetic.time_ufunc": {
-        "code": "class AVX_cmplx_arithmetic:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)\n        self.arr2 = np.ones(stride*N, dtype)",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_cmplx_arithmetic.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "bfunc",
-            "stride",
-            "dtype"
-        ],
-        "params": [
-            [
-                "'add'",
-                "'subtract'",
-                "'multiply'",
-                "'divide'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ],
-            [
-                "'F'",
-                "'D'"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "f24369a374aa5ed56c4f8005b4a576599dd925f79363650c1c952f5ad949e970",
-        "warmup_time": -1
-    },
-    "bench_avx.AVX_cmplx_funcs.time_ufunc": {
-        "code": "class AVX_cmplx_funcs:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_cmplx_funcs.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "bfunc",
-            "stride",
-            "dtype"
-        ],
-        "params": [
-            [
-                "'reciprocal'",
-                "'absolute'",
-                "'square'",
-                "'conjugate'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ],
-            [
-                "'F'",
-                "'D'"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "0b4e70f85f0a98773362fec07faa3dfa62df38218f8044b5e1874d19e5ff991d",
-        "warmup_time": -1
-    },
-    "bench_avx.AVX_ldexp.time_ufunc": {
-        "code": "class AVX_ldexp:\n    def time_ufunc(self, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, dtype, stride):\n        np.seterr(all='ignore')\n        self.f = getattr(np, 'ldexp')\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype='i')",
-        "min_run_count": 2,
-        "name": "bench_avx.AVX_ldexp.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "dtype",
-            "stride"
-        ],
-        "params": [
-            [
-                "'f'",
-                "'d'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "7b1485348542d48680da2c54ca6f3126661e7a3df7bc726f193d3961f6708ebe",
-        "warmup_time": -1
-    },
-    "bench_avx.LogisticRegression.time_train": {
-        "code": "class LogisticRegression:\n    def time_train(self, dtype):\n        self.train(1000)\n\n    def setup(self, dtype):\n        np.random.seed(42)\n        self.size = 250\n        features = 16\n        self.X_train = np.random.rand(self.size,features).astype(dtype)\n        self.Y_train = np.random.choice(2,self.size).astype(dtype)\n        # Initialize weights\n        self.W = np.zeros((features,1), dtype=dtype)\n        self.b = np.zeros((1,1), dtype=dtype)\n        self.alpha = 0.1",
-        "min_run_count": 2,
-        "name": "bench_avx.LogisticRegression.time_train",
-        "number": 0,
-        "param_names": [
-            "dtype"
-        ],
-        "params": [
-            [
-                "<class 'numpy.float32'>",
-                "<class 'numpy.float64'>"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 1000,
-        "type": "time",
-        "unit": "seconds",
-        "version": "e86e16eb2784715dd92cc28fe3cf3d4b7cd03bbfb23570674abc1d06d35e8505",
-        "warmup_time": -1
-    },
-    "bench_avx.Mandelbrot.time_mandel": {
-        "code": "class Mandelbrot:\n    def time_mandel(self):\n        self.mandelbrot_set(-0.74877,-0.74872,0.06505,0.06510,1000,1000,2048)",
-        "min_run_count": 2,
-        "name": "bench_avx.Mandelbrot.time_mandel",
-        "number": 0,
-        "param_names": [],
-        "params": [],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 60.0,
-        "type": "time",
-        "unit": "seconds",
-        "version": "74f62bffab8b9720277f099c1fb8d06c8eb635599e335a58345cf121cd5a7b59",
-        "warmup_time": -1
-    },
     "bench_core.Core.time_arange_100": {
         "code": "class Core:\n    def time_arange_100(self):\n        np.arange(100)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
@@ -5658,6 +5414,256 @@
         "type": "time",
         "unit": "seconds",
         "version": "5e9a778c538969f78e1a50b387862004b9261c57231bd40e2b48ff4b647e46d8",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.AVX_BFunc.time_ufunc": {
+        "code": "class AVX_BFunc:\n    def time_ufunc(self, ufuncname, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, ufuncname, dtype, stride):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.AVX_BFunc.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "avx_based_bfunc",
+            "dtype",
+            "stride"
+        ],
+        "params": [
+            [
+                "'maximum'",
+                "'minimum'"
+            ],
+            [
+                "'f'",
+                "'d'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "d5f7476238150410a90783e3473e3450318af3bdbdd6438270304e15de264b65",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.AVX_UFunc_log.time_log": {
+        "code": "class AVX_UFunc_log:\n    def time_log(self, stride, dtype):\n        np.log(self.arr[::stride])\n\n    def setup(self, stride, dtype):\n        np.seterr(all='ignore')\n        N = 10000\n        self.arr = np.array(np.random.random_sample(stride*N), dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.AVX_UFunc_log.time_log",
+        "number": 0,
+        "param_names": [
+            "stride",
+            "dtype"
+        ],
+        "params": [
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'f'",
+                "'d'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "758b2c2d627de74fb1523a7612f0bc5575388c40d22107bcee8e49ecb7cbbfd4",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.AVX_cmplx_arithmetic.time_ufunc": {
+        "code": "class AVX_cmplx_arithmetic:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)\n        self.arr2 = np.ones(stride*N, dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.AVX_cmplx_arithmetic.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "bfunc",
+            "stride",
+            "dtype"
+        ],
+        "params": [
+            [
+                "'add'",
+                "'subtract'",
+                "'multiply'",
+                "'divide'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'F'",
+                "'D'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "f24369a374aa5ed56c4f8005b4a576599dd925f79363650c1c952f5ad949e970",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.AVX_cmplx_funcs.time_ufunc": {
+        "code": "class AVX_cmplx_funcs:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.AVX_cmplx_funcs.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "bfunc",
+            "stride",
+            "dtype"
+        ],
+        "params": [
+            [
+                "'reciprocal'",
+                "'absolute'",
+                "'square'",
+                "'conjugate'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'F'",
+                "'D'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "0b4e70f85f0a98773362fec07faa3dfa62df38218f8044b5e1874d19e5ff991d",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.AVX_ldexp.time_ufunc": {
+        "code": "class AVX_ldexp:\n    def time_ufunc(self, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, dtype, stride):\n        np.seterr(all='ignore')\n        self.f = getattr(np, 'ldexp')\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype='i')",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.AVX_ldexp.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "dtype",
+            "stride"
+        ],
+        "params": [
+            [
+                "'f'",
+                "'d'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "7b1485348542d48680da2c54ca6f3126661e7a3df7bc726f193d3961f6708ebe",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.LogisticRegression.time_train": {
+        "code": "class LogisticRegression:\n    def time_train(self, dtype):\n        self.train(1000)\n\n    def setup(self, dtype):\n        np.random.seed(42)\n        self.size = 250\n        features = 16\n        self.X_train = np.random.rand(self.size,features).astype(dtype)\n        self.Y_train = np.random.choice(2,self.size).astype(dtype)\n        # Initialize weights\n        self.W = np.zeros((features,1), dtype=dtype)\n        self.b = np.zeros((1,1), dtype=dtype)\n        self.alpha = 0.1",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.LogisticRegression.time_train",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float32'>",
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 1000,
+        "type": "time",
+        "unit": "seconds",
+        "version": "e86e16eb2784715dd92cc28fe3cf3d4b7cd03bbfb23570674abc1d06d35e8505",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.Mandelbrot.time_mandel": {
+        "code": "class Mandelbrot:\n    def time_mandel(self):\n        self.mandelbrot_set(-0.74877,-0.74872,0.06505,0.06510,1000,1000,2048)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.Mandelbrot.time_mandel",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "74f62bffab8b9720277f099c1fb8d06c8eb635599e335a58345cf121cd5a7b59",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.Unary.time_ufunc": {
+        "code": "class Unary:\n    def time_ufunc(self, ufuncname, stride, stride_out, dtype):\n        self.f(self.arr[::stride], self.arr_out[::stride_out])\n\n    def setup(self, ufuncname, stride, stride_out, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr = np.ones(stride*N, dtype)\n        self.arr_out = np.empty(stride_out*N, dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.Unary.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "ufunc",
+            "stride_in",
+            "stride_out",
+            "dtype"
+        ],
+        "params": [
+            [
+                "'sin'",
+                "'cos'",
+                "'exp'",
+                "'log'",
+                "'sqrt'",
+                "'absolute'",
+                "'reciprocal'",
+                "'square'",
+                "'rint'",
+                "'floor'",
+                "'ceil'",
+                "'trunc'",
+                "'frexp'",
+                "'isnan'",
+                "'isfinite'",
+                "'isinf'",
+                "'signbit'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'f'",
+                "'d'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "198a80e36deafe4897bf3d24c73c0e1de18bcc84e634bb4d0c97b38f34feb700",
         "warmup_time": -1
     },
     "version": 2
