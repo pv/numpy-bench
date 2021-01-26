@@ -641,6 +641,21 @@
         "version": "f5f2fda543a06557ed577505581a4e4a69c28db7f4d56d15e3a5ab70c5836ad1",
         "warmup_time": -1
     },
+    "bench_core.Core.time_tril_indices_500": {
+        "code": "class Core:\n    def time_tril_indices_500(self):\n        np.tril_indices(500)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_tril_indices_500",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "b00c8c298dd9483448ee0601526273d6576350e7cbff10d47b606a7182b9ee51",
+        "warmup_time": -1
+    },
     "bench_core.Core.time_tril_l10x10": {
         "code": "class Core:\n    def time_tril_l10x10(self):\n        np.tril(self.l10x10)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
         "min_run_count": 2,
@@ -654,6 +669,21 @@
         "type": "time",
         "unit": "seconds",
         "version": "52a8d958bc2f0d6641959d60b4e362bd13ff07ad07cb91f67c86c1371049d522",
+        "warmup_time": -1
+    },
+    "bench_core.Core.time_triu_indices_500": {
+        "code": "class Core:\n    def time_triu_indices_500(self):\n        np.triu_indices(500)\n\n    def setup(self):\n        self.l100 = range(100)\n        self.l50 = range(50)\n        self.float_l1000 = [float(i) for i in range(1000)]\n        self.float64_l1000 = [np.float64(i) for i in range(1000)]\n        self.int_l1000 = list(range(1000))\n        self.l = [np.arange(1000), np.arange(1000)]\n        self.l_view = [memoryview(a) for a in self.l]\n        self.l10x10 = np.ones((10, 10))\n        self.float64_dtype = np.dtype(np.float64)",
+        "min_run_count": 2,
+        "name": "bench_core.Core.time_triu_indices_500",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "e67074fcc7b979a87a1080d3203b5ed9afac0744671de5d1ffb13cba5e2c27f4",
         "warmup_time": -1
     },
     "bench_core.Core.time_triu_l10x10": {
