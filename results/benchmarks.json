@@ -1298,7 +1298,7 @@
         "warmup_time": -1
     },
     "bench_function_base.Median.time_even": {
-        "code": "class Median:\n    def time_even(self):\n        np.median(self.e)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_even(self):\n        np.median(self.e)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_even",
         "number": 0,
@@ -1309,11 +1309,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "c8988ee7d7d40ea51759e7382820be86368c85ad7a8b4ea6bc5d7cf039ad7d0b",
+        "version": "13b3b69fccb37edf9506bbda2fc94d186da8c807a7b327a06594a505019f2f2f",
         "warmup_time": -1
     },
     "bench_function_base.Median.time_even_inplace": {
-        "code": "class Median:\n    def time_even_inplace(self):\n        np.median(self.e, overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_even_inplace(self):\n        np.median(self.e, overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_even_inplace",
         "number": 0,
@@ -1324,11 +1324,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "4de6b4c5c6fe319606c87af121f4b930d52e60a79b55f19d3e46e759968e8517",
+        "version": "66ab8767b044f8bba391dcde907bc3f8adaaa5ed6d3bdc98f8cd145c3d1504dc",
         "warmup_time": -1
     },
     "bench_function_base.Median.time_even_small": {
-        "code": "class Median:\n    def time_even_small(self):\n        np.median(self.e[:500], overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_even_small(self):\n        np.median(self.e[:500], overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_even_small",
         "number": 0,
@@ -1339,11 +1339,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "ac742d35aa5ca0643a11510aa902569489bf2b225d71a6c8cc12d508167104d0",
+        "version": "7e875480f5efc782650ad82c3da3b98e1c792c1a0ef6909b6f4ca34723f5f74a",
         "warmup_time": -1
     },
     "bench_function_base.Median.time_odd": {
-        "code": "class Median:\n    def time_odd(self):\n        np.median(self.o)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_odd(self):\n        np.median(self.o)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_odd",
         "number": 0,
@@ -1354,11 +1354,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "a7c0e54fb005a3f790f8317492d495aa785a5b118a0618dd2c24628ca8289c73",
+        "version": "c9387484b60ca2a29af6a76b204e2e946707a510ce8f0cf34ad94034e60fa9f4",
         "warmup_time": -1
     },
     "bench_function_base.Median.time_odd_inplace": {
-        "code": "class Median:\n    def time_odd_inplace(self):\n        np.median(self.o, overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_odd_inplace(self):\n        np.median(self.o, overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_odd_inplace",
         "number": 0,
@@ -1369,11 +1369,11 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "1bcac9a503f2c82792750b26cca859f5c4fa6791d4babfe6200a1c305a196fb0",
+        "version": "247fb9cabd1120f968f253104e257b12ee43dfdccd615442560ee3fc19c73f19",
         "warmup_time": -1
     },
     "bench_function_base.Median.time_odd_small": {
-        "code": "class Median:\n    def time_odd_small(self):\n        np.median(self.o[:500], overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)",
+        "code": "class Median:\n    def time_odd_small(self):\n        np.median(self.o[:500], overwrite_input=True)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
         "min_run_count": 2,
         "name": "bench_function_base.Median.time_odd_small",
         "number": 0,
@@ -1384,7 +1384,37 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "0b2f23a3032466239bec187b638bc54306788a911d41d58aec416e4f023afb5c",
+        "version": "ca5ae3c9b420da70652d3804e6ed8c638ebce887f7e8bf1ea47eeeac067f0dc5",
+        "warmup_time": -1
+    },
+    "bench_function_base.Median.time_tall": {
+        "code": "class Median:\n    def time_tall(self):\n        np.median(self.tall, axis=-1)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
+        "min_run_count": 2,
+        "name": "bench_function_base.Median.time_tall",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "cdd4fd8c870b9317004bded6790f3ee97e061fda9c111d1ff931f73a65f45800",
+        "warmup_time": -1
+    },
+    "bench_function_base.Median.time_wide": {
+        "code": "class Median:\n    def time_wide(self):\n        np.median(self.wide, axis=0)\n\n    def setup(self):\n        self.e = np.arange(10000, dtype=np.float32)\n        self.o = np.arange(10001, dtype=np.float32)\n        self.tall = np.random.random((10000, 20))\n        self.wide = np.random.random((20, 10000))",
+        "min_run_count": 2,
+        "name": "bench_function_base.Median.time_wide",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "2cc4f8b970b0002377700dcbd509c1ee53cb30b8ce8e3703b2a50af674db3d4d",
         "warmup_time": -1
     },
     "bench_function_base.Percentile.time_percentile": {
