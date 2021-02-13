@@ -2894,6 +2894,36 @@
         "version": "b4277ec92e77c2bf4bb0b2a8e8dce9197194cef3f65e13f14bd7fb5b7e74a8ac",
         "warmup_time": -1
     },
+    "bench_lib.Unique.time_unique": {
+        "code": "class Unique:\n    def time_unique(self, array_size, percent_nans):\n        np.unique(self.arr)\n\n    def setup(self, array_size, percent_nans):\n        np.random.seed(123)\n        # produce a randomly shuffled array with the\n        # approximate desired percentage np.nan content\n        base_array = np.random.uniform(size=array_size)\n        base_array[base_array < percent_nans / 100.] = np.nan\n        self.arr = base_array",
+        "min_run_count": 2,
+        "name": "bench_lib.Unique.time_unique",
+        "number": 0,
+        "param_names": [
+            "array_size",
+            "percent_nans"
+        ],
+        "params": [
+            [
+                "200",
+                "200000"
+            ],
+            [
+                "0",
+                "0.1",
+                "2.0",
+                "50.0",
+                "90.0"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "1decf0ff98fb6d5abc45236b819ffeb9c2dacb6aaa98ef6216f4ff307fdf042f",
+        "warmup_time": -1
+    },
     "bench_linalg.Eindot.time_dot_a_b": {
         "code": "class Eindot:\n    def time_dot_a_b(self):\n        np.dot(self.a, self.b)\n\n    def setup(self):\n        self.a = np.arange(60000.0).reshape(150, 400)\n        self.ac = self.a.copy()\n        self.at = self.a.T\n        self.atc = self.a.T.copy()\n        self.b = np.arange(240000.0).reshape(400, 600)\n        self.c = np.arange(600)\n        self.d = np.arange(400)\n    \n        self.a3 = np.arange(480000.).reshape(60, 80, 100)\n        self.b3 = np.arange(192000.).reshape(80, 60, 40)",
         "min_run_count": 2,
