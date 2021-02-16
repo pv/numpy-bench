@@ -826,7 +826,10 @@
             ],
             [
                 "<class 'bool'>",
-                "<class 'int'>",
+                "<class 'numpy.int8'>",
+                "<class 'numpy.int16'>",
+                "<class 'numpy.int32'>",
+                "<class 'numpy.int64'>",
                 "<class 'str'>",
                 "<class 'object'>"
             ]
@@ -862,7 +865,10 @@
             ],
             [
                 "<class 'bool'>",
-                "<class 'int'>",
+                "<class 'numpy.int8'>",
+                "<class 'numpy.int16'>",
+                "<class 'numpy.int32'>",
+                "<class 'numpy.int64'>",
                 "<class 'str'>",
                 "<class 'object'>"
             ]
@@ -898,7 +904,10 @@
             ],
             [
                 "<class 'bool'>",
-                "<class 'int'>",
+                "<class 'numpy.int8'>",
+                "<class 'numpy.int16'>",
+                "<class 'numpy.int32'>",
+                "<class 'numpy.int64'>",
                 "<class 'str'>",
                 "<class 'object'>"
             ]
