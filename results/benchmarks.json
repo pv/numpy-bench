@@ -3512,7 +3512,7 @@
         "warmup_time": -1
     },
     "bench_linalg.Linalg.time_op": {
-        "code": "class Linalg:\n    def time_op(self, op, typename):\n        self.func(self.a)\n\n    def setup(self, op, typename):\n        np.seterr(all='ignore')\n    \n        self.func = getattr(np.linalg, op)\n    \n        if op == 'cholesky':\n            # we need a positive definite\n            self.a = np.dot(get_squares_()[typename],\n                            get_squares_()[typename].T)\n        else:\n            self.a = get_squares_()[typename]\n    \n        # check that dtype is supported at all\n        try:\n            self.func(self.a[:2, :2])\n        except TypeError:\n            raise NotImplementedError()",
+        "code": "class Linalg:\n    def time_op(self, op, typename):\n        self.func(self.a)\n\n    def setup(self, op, typename):\n        np.seterr(all='ignore')\n    \n        self.func = getattr(np.linalg, op)\n    \n        if op == 'cholesky':\n            # we need a positive definite\n            self.a = np.dot(get_squares_()[typename],\n                            get_squares_()[typename].T)\n        else:\n            self.a = get_squares_()[typename]\n    \n        # check that dtype is supported at all\n        try:\n            self.func(self.a[:2, :2])\n        except TypeError as e:\n            raise NotImplementedError() from e",
         "min_run_count": 2,
         "name": "bench_linalg.Linalg.time_op",
         "number": 0,
@@ -3545,7 +3545,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "af5f67d37b335b9d90510e579b0a142550c4a692f3409adff2c2fbcb835b5034",
+        "version": "ec96fb5a1e3cb3d3b9f7942ee8998339851dfeb014b07775259423d500861162",
         "warmup_time": -1
     },
     "bench_linalg.Lstsq.time_numpy_linalg_lstsq_a__b_float64": {
@@ -5328,7 +5328,7 @@
         "warmup_time": -1
     },
     "bench_ufunc.CustomScalarFloorDivideInt.time_floor_divide_int": {
-        "code": "class CustomScalarFloorDivideInt:\n    def time_floor_divide_int(self, dtpye, divisor):\n        self.x // divisor\n\n    def setup(self, dtype, divisor):\n        iinfo = np.iinfo(dtype)\n        self.x = np.arange(\n                max(iinfo.min, self.min_value),\n                min(iinfo.max, self.max_value), dtype=dtype)",
+        "code": "class CustomScalarFloorDivideInt:\n    def time_floor_divide_int(self, dtype, divisor):\n        self.x // divisor\n\n    def setup(self, dtype, divisor):\n        if dtype in np.sctypes['uint'] and divisor < 0:\n            raise NotImplementedError(\n                    \"Skipping test for negative divisor with unsigned type\")\n    \n        iinfo = np.iinfo(dtype)\n        self.x = np.random.randint(\n                    iinfo.min, iinfo.max, size=10000, dtype=dtype)",
         "min_run_count": 2,
         "name": "bench_ufunc.CustomScalarFloorDivideInt.time_floor_divide_int",
         "number": 0,
@@ -5341,14 +5341,17 @@
                 "<class 'numpy.int8'>",
                 "<class 'numpy.int16'>",
                 "<class 'numpy.int32'>",
-                "<class 'numpy.int64'>"
+                "<class 'numpy.int64'>",
+                "<class 'numpy.uint8'>",
+                "<class 'numpy.uint16'>",
+                "<class 'numpy.uint32'>",
+                "<class 'numpy.uint64'>"
             ],
             [
                 "8",
                 "-8",
                 "43",
-                "-43",
-                "0"
+                "-43"
             ]
         ],
         "rounds": 2,
@@ -5356,7 +5359,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "124fed333c76a597fe63e8c8d83c22504ec8666cc96a6d652d48a32c17769b04",
+        "version": "4117e9cbb8ab1f8d3e10999fe2126e38f22fe26fc9ed7e2be2fd67824998d6eb",
         "warmup_time": -1
     },
     "bench_ufunc.Scalar.time_add_scalar": {
@@ -5516,7 +5519,7 @@
         "warmup_time": -1
     },
     "bench_ufunc_strides.AVX_BFunc.time_ufunc": {
-        "code": "class AVX_BFunc:\n    def time_ufunc(self, ufuncname, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, ufuncname, dtype, stride):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype=dtype)",
+        "code": "class AVX_BFunc:\n    def time_ufunc(self, ufuncname, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, ufuncname, dtype, stride):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No ufunc {ufuncname} found\") from None\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype=dtype)",
         "min_run_count": 2,
         "name": "bench_ufunc_strides.AVX_BFunc.time_ufunc",
         "number": 0,
@@ -5545,7 +5548,7 @@
         "timeout": 10,
         "type": "time",
         "unit": "seconds",
-        "version": "d5f7476238150410a90783e3473e3450318af3bdbdd6438270304e15de264b65",
+        "version": "1e54f718f49b2ace3f4ba8b4107a9a2b7fe68b773ab56cb0e0269cbcd7ca898f",
         "warmup_time": -1
     },
     "bench_ufunc_strides.AVX_UFunc_log.time_log": {
@@ -5577,7 +5580,7 @@
         "warmup_time": -1
     },
     "bench_ufunc_strides.AVX_cmplx_arithmetic.time_ufunc": {
-        "code": "class AVX_cmplx_arithmetic:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)\n        self.arr2 = np.ones(stride*N, dtype)",
+        "code": "class AVX_cmplx_arithmetic:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No bfunc {bfuncname} found\") from None\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)\n        self.arr2 = np.ones(stride*N, dtype)",
         "min_run_count": 2,
         "name": "bench_ufunc_strides.AVX_cmplx_arithmetic.time_ufunc",
         "number": 0,
@@ -5608,11 +5611,11 @@
         "timeout": 10,
         "type": "time",
         "unit": "seconds",
-        "version": "f24369a374aa5ed56c4f8005b4a576599dd925f79363650c1c952f5ad949e970",
+        "version": "6d182e83551b08781041f2192c70fd0ed7cafbb3bd3492a45cc7064da1b49319",
         "warmup_time": -1
     },
     "bench_ufunc_strides.AVX_cmplx_funcs.time_ufunc": {
-        "code": "class AVX_cmplx_funcs:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)",
+        "code": "class AVX_cmplx_funcs:\n    def time_ufunc(self, bfuncname, stride, dtype):\n        self.f(self.arr1[::stride])\n\n    def setup(self, bfuncname, stride, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, bfuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No bfunc {bfuncname} found\") from None\n        N = 10000\n        self.arr1 = np.ones(stride*N, dtype)",
         "min_run_count": 2,
         "name": "bench_ufunc_strides.AVX_cmplx_funcs.time_ufunc",
         "number": 0,
@@ -5643,7 +5646,7 @@
         "timeout": 10,
         "type": "time",
         "unit": "seconds",
-        "version": "0b4e70f85f0a98773362fec07faa3dfa62df38218f8044b5e1874d19e5ff991d",
+        "version": "c512db7e180ac3a2a2b566dc24527d74e5cbf2afe29b1f3bee89b00127ee699b",
         "warmup_time": -1
     },
     "bench_ufunc_strides.AVX_ldexp.time_ufunc": {
@@ -5712,7 +5715,7 @@
         "warmup_time": -1
     },
     "bench_ufunc_strides.Unary.time_ufunc": {
-        "code": "class Unary:\n    def time_ufunc(self, ufuncname, stride, stride_out, dtype):\n        self.f(self.arr[::stride], self.arr_out[::stride_out])\n\n    def setup(self, ufuncname, stride, stride_out, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError()\n        N = 10000\n        self.arr = np.ones(stride*N, dtype)\n        self.arr_out = np.empty(stride_out*N, dtype)",
+        "code": "class Unary:\n    def time_ufunc(self, ufuncname, stride, stride_out, dtype):\n        self.f(self.arr[::stride], self.arr_out[::stride_out])\n\n    def setup(self, ufuncname, stride, stride_out, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No ufunc {ufuncname} found\") from None\n        N = 10000\n        self.arr = np.ones(stride*N, dtype)\n        self.arr_out = np.empty(stride_out*N, dtype)",
         "min_run_count": 2,
         "name": "bench_ufunc_strides.Unary.time_ufunc",
         "number": 0,
@@ -5762,7 +5765,7 @@
         "timeout": 10,
         "type": "time",
         "unit": "seconds",
-        "version": "198a80e36deafe4897bf3d24c73c0e1de18bcc84e634bb4d0c97b38f34feb700",
+        "version": "d046a0a684904c489f7377bb79be1bd0cee2d5019148be0eaacf32d728541729",
         "warmup_time": -1
     },
     "version": 2
