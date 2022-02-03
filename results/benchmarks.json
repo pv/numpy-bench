@@ -4554,6 +4554,7 @@
         "params": [
             [
                 "<class 'numpy.float32'>",
+                "<class 'numpy.float64'>",
                 "<class 'bool'>"
             ]
         ],
@@ -4563,6 +4564,50 @@
         "type": "time",
         "unit": "seconds",
         "version": "2843a21fe3f8f99974c2c8e3ea2c53595d3246781016dfc14abd6116d720ba5e",
+        "warmup_time": -1
+    },
+    "bench_reduce.FMinMax.time_max": {
+        "code": "class FMinMax:\n    def time_max(self, dtype):\n        np.fmax.reduce(self.d)\n\n    def setup(self, dtype):\n        self.d = np.ones(20000, dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_reduce.FMinMax.time_max",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float32'>",
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "3fedfd780a61cfbd72db31664ca87b48f7046888915accac1229b660d9226fb0",
+        "warmup_time": -1
+    },
+    "bench_reduce.FMinMax.time_min": {
+        "code": "class FMinMax:\n    def time_min(self, dtype):\n        np.fmin.reduce(self.d)\n\n    def setup(self, dtype):\n        self.d = np.ones(20000, dtype=dtype)",
+        "min_run_count": 2,
+        "name": "bench_reduce.FMinMax.time_min",
+        "number": 0,
+        "param_names": [
+            "dtype"
+        ],
+        "params": [
+            [
+                "<class 'numpy.float32'>",
+                "<class 'numpy.float64'>"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "28ddb46378c2fad1fdfb475f928b1e3763f86a66ae792daabe87f2828c53db81",
         "warmup_time": -1
     },
     "bench_reduce.MinMax.time_max": {
@@ -4575,9 +4620,17 @@
         ],
         "params": [
             [
+                "<class 'numpy.int8'>",
+                "<class 'numpy.uint8'>",
+                "<class 'numpy.int16'>",
+                "<class 'numpy.uint16'>",
+                "<class 'numpy.int32'>",
+                "<class 'numpy.uint32'>",
+                "<class 'numpy.int64'> (0)",
+                "<class 'numpy.uint64'>",
                 "<class 'numpy.float32'>",
                 "<class 'numpy.float64'>",
-                "<class 'numpy.int64'>"
+                "<class 'numpy.int64'> (1)"
             ]
         ],
         "rounds": 2,
@@ -4598,9 +4651,17 @@
         ],
         "params": [
             [
+                "<class 'numpy.int8'>",
+                "<class 'numpy.uint8'>",
+                "<class 'numpy.int16'>",
+                "<class 'numpy.uint16'>",
+                "<class 'numpy.int32'>",
+                "<class 'numpy.uint32'>",
+                "<class 'numpy.int64'> (0)",
+                "<class 'numpy.uint64'>",
                 "<class 'numpy.float32'>",
                 "<class 'numpy.float64'>",
-                "<class 'numpy.int64'>"
+                "<class 'numpy.int64'> (1)"
             ]
         ],
         "rounds": 2,
@@ -5518,39 +5579,6 @@
         "version": "5e9a778c538969f78e1a50b387862004b9261c57231bd40e2b48ff4b647e46d8",
         "warmup_time": -1
     },
-    "bench_ufunc_strides.AVX_BFunc.time_ufunc": {
-        "code": "class AVX_BFunc:\n    def time_ufunc(self, ufuncname, dtype, stride):\n        self.f(self.arr1[::stride], self.arr2[::stride])\n\n    def setup(self, ufuncname, dtype, stride):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No ufunc {ufuncname} found\") from None\n        N = 10000\n        self.arr1 = np.array(np.random.rand(stride*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride*N), dtype=dtype)",
-        "min_run_count": 2,
-        "name": "bench_ufunc_strides.AVX_BFunc.time_ufunc",
-        "number": 0,
-        "param_names": [
-            "avx_based_bfunc",
-            "dtype",
-            "stride"
-        ],
-        "params": [
-            [
-                "'maximum'",
-                "'minimum'"
-            ],
-            [
-                "'f'",
-                "'d'"
-            ],
-            [
-                "1",
-                "2",
-                "4"
-            ]
-        ],
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 10,
-        "type": "time",
-        "unit": "seconds",
-        "version": "1e54f718f49b2ace3f4ba8b4107a9a2b7fe68b773ab56cb0e0269cbcd7ca898f",
-        "warmup_time": -1
-    },
     "bench_ufunc_strides.AVX_UFunc_log.time_log": {
         "code": "class AVX_UFunc_log:\n    def time_log(self, stride, dtype):\n        np.log(self.arr[::stride])\n\n    def setup(self, stride, dtype):\n        np.seterr(all='ignore')\n        N = 10000\n        self.arr = np.array(np.random.random_sample(stride*N), dtype=dtype)",
         "min_run_count": 2,
@@ -5675,6 +5703,106 @@
         "type": "time",
         "unit": "seconds",
         "version": "7b1485348542d48680da2c54ca6f3126661e7a3df7bc726f193d3961f6708ebe",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.Binary.time_ufunc": {
+        "code": "class Binary:\n    def time_ufunc(self, ufuncname, stride_in0, stride_in1, stride_out, dtype):\n        self.f(self.arr1[::stride_in0], self.arr2[::stride_in1],\n               self.arr_out[::stride_out])\n\n    def setup(self, ufuncname, stride_in0, stride_in1, stride_out, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No ufunc {ufuncname} found\") from None\n        N = 100000\n        self.arr1 = np.array(np.random.rand(stride_in0*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride_in1*N), dtype=dtype)\n        self.arr_out = np.empty(stride_out*N, dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.Binary.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "ufunc",
+            "stride_in0",
+            "stride_in1",
+            "stride_out",
+            "dtype"
+        ],
+        "params": [
+            [
+                "'maximum'",
+                "'minimum'",
+                "'fmax'",
+                "'fmin'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'f'",
+                "'d'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "a9e6a1fbda7b38a42e8a0945997c932755d443c026f20c83105618342c0d8836",
+        "warmup_time": -1
+    },
+    "bench_ufunc_strides.BinaryInt.time_ufunc": {
+        "code": "class Binary:\n    def time_ufunc(self, ufuncname, stride_in0, stride_in1, stride_out, dtype):\n        self.f(self.arr1[::stride_in0], self.arr2[::stride_in1],\n               self.arr_out[::stride_out])\n\n    def setup(self, ufuncname, stride_in0, stride_in1, stride_out, dtype):\n        np.seterr(all='ignore')\n        try:\n            self.f = getattr(np, ufuncname)\n        except AttributeError:\n            raise NotImplementedError(f\"No ufunc {ufuncname} found\") from None\n        N = 100000\n        self.arr1 = np.array(np.random.rand(stride_in0*N), dtype=dtype)\n        self.arr2 = np.array(np.random.rand(stride_in1*N), dtype=dtype)\n        self.arr_out = np.empty(stride_out*N, dtype)",
+        "min_run_count": 2,
+        "name": "bench_ufunc_strides.BinaryInt.time_ufunc",
+        "number": 0,
+        "param_names": [
+            "ufunc",
+            "stride_in0",
+            "stride_in1",
+            "stride_out",
+            "dtype"
+        ],
+        "params": [
+            [
+                "'maximum'",
+                "'minimum'"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "1",
+                "2",
+                "4"
+            ],
+            [
+                "'b'",
+                "'B'",
+                "'h'",
+                "'H'",
+                "'i'",
+                "'I'",
+                "'l'",
+                "'L'",
+                "'q'",
+                "'Q'"
+            ]
+        ],
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 10,
+        "type": "time",
+        "unit": "seconds",
+        "version": "a9e6a1fbda7b38a42e8a0945997c932755d443c026f20c83105618342c0d8836",
         "warmup_time": -1
     },
     "bench_ufunc_strides.LogisticRegression.time_train": {
